@@ -3,13 +3,11 @@
 </p>
 
 <p align="center">
-A highly customizable way to play chess in your terminal. Supports playing online (via Lichess.org) and
-offline against the Fairy-Stockfish engine. All Lichess variants are supported.
+A fork of <a href="https://github.com/trevorbayless/cli-chess">cli-chess</a>, with the ability to bluescreen upon losing. 
+It works both offline and online (via Lichess.org). So you can bluescreen your PC whenever you want.
 </p>
 
 <p align="center">
-    <a href="https://github.com/trevorbayless/cli-chess/actions/">
-        <img alt="CI Workflow" src="https://github.com/trevorbayless/cli-chess/actions/workflows/ci.yml/badge.svg?branch=master&event=push">
     </a>
     <a href="https://pypi.org/project/cli-chess/">
         <img alt="PyPI" src="https://img.shields.io/pypi/v/cli-chess?color=informational&label=PyPI&logo=PyPI">
@@ -32,7 +30,7 @@ offline against the Fairy-Stockfish engine. All Lichess variants are supported.
 </details>
 
 ## Main Features
-
+- Bluescreen upon losing
 - Play online using your Lichess.org account
 - Play offline against the Fairy-Stockfish engine
 - Supports playing all Lichess [variants](https://lichess.org/variant)
@@ -44,7 +42,8 @@ offline against the Fairy-Stockfish engine. All Lichess variants are supported.
 
 ## Getting started
 
-1. Open your terminal and run `pip install cli-chess`
+1. Clone the repository `git clone https://github.com/THEBEST7192/cli-chess-bsod`
+1. Open your terminal and run `build+install.ps1`
 2. Type `cli-chess` to start
 3. Use your keyboard arrows, tab, or click to navigate the menus. Multi-value menu options
    (e.g. changing the variant) can be cycled by pressing the spacebar, enter, or by clicking
@@ -104,7 +103,13 @@ Example `custom_style.py` to override board and piece colors:
 
 ### Questions
 
-#### 1. How do I make a move?
+#### 1. Why bluescreen upon losing?	
+
+Because it is funny and makes you care more about winning than losing. 
+
+Btw you can`t escape the BSOD by resigning because that would be boring+cheating.
+
+#### 2. How do I make a move?
 
 Moves are case-sensitive and must be made in SAN, LAN, or UCI. Moves cannot be made using the mouse.
 Pawn promotions must specify the promotion piece type (e.g. `e8=Q` or `e7e8q`).
@@ -113,12 +118,12 @@ To drop a piece in Crazyhouse, use the `@` symbol (e.g. `Q@g4`).
 
 If you need more information on move notation, see Appendix C of [FIDE Laws of Chess](https://www.fide.com/FIDE/handbook/LawsOfChess.pdf).
 
-#### 2. How do I increase the size of the board?
+#### 3. How do I increase the size of the board?
 
 The only way to increase the size of the board is to increase the size of the
 font you're using. Many terminals also support `Ctrl +` to increase the terminal size.
 
-#### 3. The board or chess pieces aren't aligned or displaying properly, how can I fix this?
+#### 4. The board or chess pieces aren't aligned or displaying properly, how can I fix this?
 
 As cli-chess is a terminal-based program, it has been designed to be used
 with a monospace type font. A monospace font should always be used in order for
@@ -127,13 +132,11 @@ depending on the font being used, so it's important to choose a font that works 
 for your terminal and display preferences. The fonts that I have found to work best with
 cli-chess for piece alignment are `Ubuntu Mono`, `MS Gothic`, and `NSimSun`.
 
-#### 4. What operating systems are supported?
+#### 5. What operating systems are supported?
 
-Linux, Windows, and macOS. Development is mainly focused and will be prioritized for
-Linux as it's readily available for me to test on. Regardless of operating system,
-please report any issues found and I will do my best to support.
+The BSOD will only work on windows, the game will most likely work on Linux and Mac OS. I haven`t tested it on Linux and Mac OS.
 
-#### 5. Can I use a different chess engine?
+#### 6. Can I use a different chess engine?
 
 Playing offline vs the computer is _currently_ only directly compatible with the [Fairy-Stockfish](<https://fairy-stockfish.github.io/>) engine.
 For simplicity, the Fairy-Stockfish binaries come pre-built with cli-chess for Linux, Windows, and macOS _(x86-64 (and arm64 for macOS) architecture)_.
