@@ -15,5 +15,10 @@ class OnlineGamesMenuPresenter(MenuPresenter):
         self.vs_random_opponent_menu_presenter = OnlineVersusMenuPresenter(OnlineVsRandomOpponentMenuModel(), is_vs_ai=False)
         self.vs_computer_menu_presenter = OnlineVersusMenuPresenter(OnlineVsComputerMenuModel(), is_vs_ai=True)
         self.tv_channel_menu_presenter = TVChannelMenuPresenter(TVChannelMenuModel())
+        from cli_chess.menus.online_games_menu.continue_previous_game_menu import ContinuePreviousGameMenuModel, ContinuePreviousGameMenuPresenter, ContinuePreviousGameMenuView
+        continue_previous_game_menu_model = ContinuePreviousGameMenuModel()
+        self.continue_previous_game_menu_presenter = ContinuePreviousGameMenuPresenter(continue_previous_game_menu_model, None)
+        continue_previous_game_menu_view = ContinuePreviousGameMenuView(self.continue_previous_game_menu_presenter)
+        self.continue_previous_game_menu_presenter.view = continue_previous_game_menu_view
         self.view = OnlineGamesMenuView(self)
         super().__init__(self.model, self.view)

@@ -80,7 +80,9 @@ def open_url_in_browser(url: str):
 def threaded(fn):
     """Decorator for a threaded function"""
     def wrapper(*args, **kwargs):
-        threading.Thread(target=fn, args=args, kwargs=kwargs, daemon=True).start()
+        thread = threading.Thread(target=fn, args=args, kwargs=kwargs, daemon=True)
+        thread.start()
+        return thread
     return wrapper
 
 

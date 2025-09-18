@@ -11,9 +11,9 @@ class MenuCategory:
 
 class MenuOption:
     """A menu option that has one action on enter or click (e.g. Start game)"""
-    def __init__(self, option: Enum, description: str, enabled: bool = True, visible: bool = True, display_name=""):
+    def __init__(self, option: Union[Enum, str], description: str, enabled: bool = True, visible: bool = True, display_name=""):
         self.option = option
-        self.option_name = display_name if display_name else self.option.value
+        self.option_name = display_name if display_name else (self.option.value if isinstance(self.option, Enum) else self.option)
         self.description = description
         self.enabled = enabled
         self.visible = visible

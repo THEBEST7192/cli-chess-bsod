@@ -5,6 +5,7 @@ from cli_chess.core.api.api_manager import required_token_scopes
 from cli_chess.modules.token_manager.token_manager_model import g_token_manager_model
 from cli_chess.utils import force_recreate_configs, print_program_config
 from typing import TYPE_CHECKING
+import threading
 if TYPE_CHECKING:
     from cli_chess.core.main import MainModel
 
@@ -13,6 +14,9 @@ class MainPresenter:
     def __init__(self, model: MainModel):
         self.model = model
         self._handle_startup_args()
+        # Ensure the API token is validated and API is ready before creating the main menu
+        validation_thread = g_token_manager_model.validate_existing_linked_account()
+        validation_thread.join()
         self.main_menu_presenter = MainMenuPresenter(MainMenuModel())
         self.view = MainView(self)
 
