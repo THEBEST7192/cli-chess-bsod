@@ -10,6 +10,7 @@ from typing import List, Optional
 
 class BoardModel:
     def __init__(self, orientation: chess.Color = chess.WHITE, variant="standard", fen="", side_confirmed=True) -> None:
+        log.debug(f"BoardModel __init__ - Received FEN: {fen}")
         self.board = self._initialize_board(variant, fen)
         self.initial_fen = self.board.fen()
         self.orientation = chess.WHITE if variant.lower() == "racingkings" else orientation

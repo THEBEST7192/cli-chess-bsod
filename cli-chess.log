@@ -1,0 +1,61 @@
+09/18/2025 05:38:55.016 | INFO  | cli-chess | main_model._start_loggers | cli-chess v1.4.3 // python 3.10.0
+09/18/2025 05:38:55.016 | INFO  | cli-chess | main_model._start_loggers | System information: system=Windows // release=10 // machine=AMD64
+09/18/2025 05:38:55.017 | DEBUG | cli-chess | argparse.parse_args | Parsed arguments: Namespace(token=None, reset_config=False, base_url='https://lichess.org', print_config=False)
+09/18/2025 05:38:55.018 | DEBUG | cli-chess | token_manager_model.set_base_url | Base URL set to: https://lichess.org
+09/18/2025 05:38:58.290 | INFO  | cli-chess | token_manager_model.validate_token | Successfully authenticated with Lichess
+09/18/2025 05:38:58.294 | INFO  | cli-chess | incoming_event_manger.run | Started listening to Lichess incoming events
+09/18/2025 05:39:00.934 | DEBUG | cli-chess | incoming_event_manger.run | IEM event received: {'type': 'gameStart', 'game': {'fullId': 'RxBwM9FbkK7Q', 'gameId': 'RxBwM9Fb', 'fen': 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1', 'color': 'white', 'lastMove': 'e2e4', 'source': 'lobby', 'status': {'id': 20, 'name': 'started'}, 'variant': {'key': 'standard', 'name': 'Standard'}, 'speed': 'correspondence', 'perf': 'correspondence', 'rated': False, 'hasMoved': True, 'opponent': {'id': 'zekoso', 'username': 'zekoso', 'rating': 1500}, 'isMyTurn': False, 'compat': {'bot': False, 'board': True}, 'id': 'RxBwM9Fb'}}
+09/18/2025 05:39:00.934 | DEBUG | cli-chess | incoming_event_manger.run | IEM event received: {'type': 'gameStart', 'game': {'fullId': 'wHtiU11bPye5', 'gameId': 'wHtiU11b', 'fen': 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1', 'color': 'black', 'lastMove': '', 'source': 'lobby', 'status': {'id': 20, 'name': 'started'}, 'variant': {'key': 'standard', 'name': 'Standard'}, 'speed': 'correspondence', 'perf': 'correspondence', 'rated': False, 'hasMoved': False, 'opponent': {'id': 'peyman_12', 'username': 'peyman_12', 'rating': 1500}, 'isMyTurn': False, 'secondsLeft': 172800, 'compat': {'bot': False, 'board': True}, 'id': 'wHtiU11b'}}
+09/18/2025 05:39:01.047 | DEBUG | cli-chess | menu_presenter.select_handler | Menu selection: MainMenuOptions.ABOUT
+09/18/2025 05:39:03.988 | DEBUG | cli-chess | menu_presenter.select_handler | Menu selection: MainMenuOptions.OFFLINE_GAMES
+09/18/2025 05:39:04.542 | DEBUG | cli-chess | menu_presenter.select_handler | Menu selection: MainMenuOptions.ONLINE_GAMES
+09/18/2025 05:39:05.368 | DEBUG | cli-chess | menu_presenter.select_handler | Menu selection: OnlineGamesMenuOptions.CONTINUE_PREVIOUS_GAME
+09/18/2025 05:39:05.721 | DEBUG | cli-chess | menu_presenter.select_handler | Menu selection: OnlineGamesMenuOptions.VS_COMPUTER_ONLINE
+09/18/2025 05:39:05.930 | INFO  | cli-chess | token_manager_model.validate_token | Successfully authenticated with Lichess
+09/18/2025 05:39:05.933 | INFO  | cli-chess | incoming_event_manger.run | Started listening to Lichess incoming events
+09/18/2025 05:39:06.092 | DEBUG | cli-chess | menu_presenter.select_handler | Menu selection: OnlineGamesMenuOptions.CONTINUE_PREVIOUS_GAME
+09/18/2025 05:39:06.383 | DEBUG | cli-chess | menu_presenter.select_handler | Menu selection: OnlineGamesMenuOptions.VS_COMPUTER_ONLINE
+09/18/2025 05:39:06.604 | DEBUG | cli-chess | board_model.__init__ | BoardModel __init__ - Received FEN: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+09/18/2025 05:39:06.604 | DEBUG | cli-chess | board_model._log_init_info | =============== BOARD INITIALIZATION ===============
+09/18/2025 05:39:06.604 | DEBUG | cli-chess | board_model._log_init_info | Variant: chess
+09/18/2025 05:39:06.604 | DEBUG | cli-chess | board_model._log_init_info | Starting FEN: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+09/18/2025 05:39:06.604 | DEBUG | cli-chess | board_model._log_init_info | Orientation: white
+09/18/2025 05:39:06.604 | DEBUG | cli-chess | board_model._log_init_info | ====================================================
+09/18/2025 05:39:06.605 | DEBUG | cli-chess | game_model_base.__init__ | Created OnlineGameModel (id=2760483850032)
+09/18/2025 05:39:06.605 | ERROR | cli-chess | config.get_all_values | Unrecognized key (enable_bsod) found in configuration
+09/18/2025 05:39:06.611 | DEBUG | cli-chess | game_view_base.__init__ | Created OnlineGameView (id=2760484352208)
+09/18/2025 05:39:06.611 | DEBUG | cli-chess | game_presenter_base.__init__ | Created OnlineGamePresenter (id=2760483936608)
+09/18/2025 05:39:06.611 | DEBUG | cli-chess | ui_common.change_views | View changed to OnlineGameView (id=2760484352208)
+09/18/2025 05:39:07.345 | DEBUG | cli-chess | incoming_event_manger.run | IEM event received: {'type': 'gameStart', 'game': {'fullId': 'RxBwM9FbkK7Q', 'gameId': 'RxBwM9Fb', 'fen': 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1', 'color': 'white', 'lastMove': 'e2e4', 'source': 'lobby', 'status': {'id': 20, 'name': 'started'}, 'variant': {'key': 'standard', 'name': 'Standard'}, 'speed': 'correspondence', 'perf': 'correspondence', 'rated': False, 'hasMoved': True, 'opponent': {'id': 'zekoso', 'username': 'zekoso', 'rating': 1500}, 'isMyTurn': False, 'compat': {'bot': False, 'board': True}, 'id': 'RxBwM9Fb'}}
+09/18/2025 05:39:07.345 | DEBUG | cli-chess | incoming_event_manger.run | IEM event received: {'type': 'gameStart', 'game': {'fullId': 'wHtiU11bPye5', 'gameId': 'wHtiU11b', 'fen': 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1', 'color': 'black', 'lastMove': '', 'source': 'lobby', 'status': {'id': 20, 'name': 'started'}, 'variant': {'key': 'standard', 'name': 'Standard'}, 'speed': 'correspondence', 'perf': 'correspondence', 'rated': False, 'hasMoved': False, 'opponent': {'id': 'peyman_12', 'username': 'Peyman_12', 'rating': 1500}, 'isMyTurn': False, 'secondsLeft': 172800, 'compat': {'bot': False, 'board': True}, 'id': 'wHtiU11b'}}
+09/18/2025 05:39:12.340 | DEBUG | cli-chess | game_presenter_base.exit | Exiting game presenter
+09/18/2025 05:39:12.341 | DEBUG | cli-chess | game_model_base.cleanup | Finished cleaning up after BoardModel (id=2760483864432)
+09/18/2025 05:39:12.341 | DEBUG | cli-chess | game_model_base.cleanup | Finished cleaning up after MoveListModel (id=2760482256400)
+09/18/2025 05:39:12.341 | DEBUG | cli-chess | game_model_base.cleanup | Finished cleaning up after MaterialDifferenceModel (id=2760483937856)
+09/18/2025 05:39:12.341 | DEBUG | cli-chess | game_model_base.cleanup | Finished cleaning up after PremoveModel (id=2760483937088)
+09/18/2025 05:39:12.341 | DEBUG | cli-chess | online_game_model.cleanup | Cleared subscription from IncomingEventManager (id=2760483586736)
+09/18/2025 05:39:12.341 | DEBUG | cli-chess | ui_common.change_views | View changed to MainView (id=2760481322368)
+09/18/2025 05:39:13.009 | DEBUG | cli-chess | menu_presenter.select_handler | Menu selection: MainMenuOptions.OFFLINE_GAMES
+09/18/2025 05:39:13.197 | DEBUG | cli-chess | menu_presenter.select_handler | Menu selection: MainMenuOptions.ABOUT
+09/18/2025 05:39:13.830 | DEBUG | cli-chess | menu_presenter.select_handler | Menu selection: MainMenuOptions.OFFLINE_GAMES
+09/18/2025 05:39:14.682 | DEBUG | cli-chess | menu_presenter.select_handler | Menu selection: MainMenuOptions.ONLINE_GAMES
+09/18/2025 05:39:15.507 | DEBUG | cli-chess | menu_presenter.select_handler | Menu selection: OnlineGamesMenuOptions.CONTINUE_PREVIOUS_GAME
+09/18/2025 05:39:15.764 | DEBUG | cli-chess | menu_presenter.select_handler | Menu selection: OnlineGamesMenuOptions.CREATE_GAME
+09/18/2025 05:39:16.349 | DEBUG | cli-chess | board_model.__init__ | BoardModel __init__ - Received FEN: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+09/18/2025 05:39:16.349 | DEBUG | cli-chess | board_model._log_init_info | =============== BOARD INITIALIZATION ===============
+09/18/2025 05:39:16.349 | DEBUG | cli-chess | board_model._log_init_info | Variant: chess
+09/18/2025 05:39:16.349 | DEBUG | cli-chess | board_model._log_init_info | Starting FEN: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+09/18/2025 05:39:16.349 | DEBUG | cli-chess | board_model._log_init_info | Orientation: white
+09/18/2025 05:39:16.349 | DEBUG | cli-chess | board_model._log_init_info | ====================================================
+09/18/2025 05:39:16.351 | DEBUG | cli-chess | game_model_base.__init__ | Created OnlineGameModel (id=2760484649664)
+09/18/2025 05:39:16.351 | ERROR | cli-chess | config.get_all_values | Unrecognized key (enable_bsod) found in configuration
+09/18/2025 05:39:16.358 | DEBUG | cli-chess | game_view_base.__init__ | Created OnlineGameView (id=2760485377344)
+09/18/2025 05:39:16.359 | DEBUG | cli-chess | game_presenter_base.__init__ | Created OnlineGamePresenter (id=2760483482656)
+09/18/2025 05:39:16.359 | DEBUG | cli-chess | ui_common.change_views | View changed to OnlineGameView (id=2760485377344)
+09/18/2025 05:39:18.710 | DEBUG | cli-chess | game_presenter_base.exit | Exiting game presenter
+09/18/2025 05:39:18.710 | DEBUG | cli-chess | game_model_base.cleanup | Finished cleaning up after BoardModel (id=2760484648704)
+09/18/2025 05:39:18.710 | DEBUG | cli-chess | game_model_base.cleanup | Finished cleaning up after MoveListModel (id=2760484641936)
+09/18/2025 05:39:18.710 | DEBUG | cli-chess | game_model_base.cleanup | Finished cleaning up after MaterialDifferenceModel (id=2760483723712)
+09/18/2025 05:39:18.710 | DEBUG | cli-chess | game_model_base.cleanup | Finished cleaning up after PremoveModel (id=2760483238672)
+09/18/2025 05:39:18.710 | DEBUG | cli-chess | online_game_model.cleanup | Cleared subscription from IncomingEventManager (id=2760483586736)
+09/18/2025 05:39:18.710 | DEBUG | cli-chess | ui_common.change_views | View changed to MainView (id=2760481322368)
