@@ -19,7 +19,7 @@ class OnlineGameModel(PlayableGameModelBase):
        Games not owned by this account must directly use the base model instead.
     """
     def __init__(self, game_parameters: dict, is_vs_ai: bool):
-        super().__init__(play_as_color=game_parameters[GameOption.COLOR], variant=game_parameters[GameOption.VARIANT], fen=None, side_confirmed=is_vs_ai)  # noqa: E501
+        super().__init__(play_as_color=game_parameters[GameOption.COLOR], variant=game_parameters[GameOption.VARIANT], fen=game_parameters.get("fen"), side_confirmed=is_vs_ai)  # noqa: E501
         self.vs_ai = is_vs_ai
         self.playing_game_id = None
         self.searching = False
@@ -208,7 +208,7 @@ class OnlineGameModel(PlayableGameModelBase):
             if EventTopics.GAME_START in args:
                 self.board_model.reinitialize_board(variant=self.game_metadata.variant,
                                                     orientation=(self.my_color if self.board_model.get_variant_name() != "racingkings" else WHITE),
-                                                    fen=data.get('initialFen', ""))
+                                                    fen=data.get('fen', ""))
                 self.board_model.make_moves_from_list(data.get('state', {}).get('moves', []).split())
 
             elif EventTopics.MOVE_MADE in args:

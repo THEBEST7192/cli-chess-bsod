@@ -42,10 +42,9 @@ It works both offline and online (via Lichess.org). So you can bluescreen your P
 
 ## Getting started
 
-1. Clone the repository `git clone https://github.com/THEBEST7192/cli-chess-bsod`
-2. Build and install the project `build+install.ps1`
-3. Type `cli-chess` to start
-4. Use your keyboard arrows, tab, or click to navigate the menus. Multi-value menu options
+1. Open your terminal and run `pip install cli-chess`
+2. Type `cli-chess` to start
+3. Use your keyboard arrows, tab, or click to navigate the menus. Multi-value menu options
    (e.g. changing the variant) can be cycled by pressing the spacebar, enter, or by clicking
    on the value.
 

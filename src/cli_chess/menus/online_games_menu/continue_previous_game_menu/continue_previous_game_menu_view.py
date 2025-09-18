@@ -18,8 +18,11 @@ class ContinuePreviousGameMenuView(MenuView):
         super().__init__(self.presenter, container_width=38)
 
     def get_function_bar_fragments(self) -> list[FormattedText]:
-        return []
+        return [("class:function-bar.key", "F1"), ("class:function-bar.label", "Continue Game")]
 
     def get_function_bar_key_bindings(self) -> KeyBindingsBase:
         kb = KeyBindings()
+        @kb.add("f1")
+        def _(event):
+            self.presenter.continue_game()
         return kb
